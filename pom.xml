@@ -49,6 +49,14 @@
         <url>https://github.com/detestbaas/playwright-annotations/tree/main</url>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/detestbaas/playwright-annotations</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <playwright.version>1.41.2</playwright.version>
 
