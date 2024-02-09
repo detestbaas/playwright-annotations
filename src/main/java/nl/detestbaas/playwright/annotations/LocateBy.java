@@ -32,11 +32,35 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface LocateBy {
+    /**
+     * Returns the 'How' strategy used to locate an element.
+     *
+     * @return The 'How' strategy used to locate an element.
+     */
     How how() default How.UNSET;
 
+    /**
+     * Returns the value of the "value" parameter of the annotation.
+     *
+     * @return the value of the "value" parameter
+     */
     String value() default "";
 
+    /**
+     * Returns the pattern used to locate an element.
+     *
+     * @return The pattern used to locate an element.
+     */
     String pattern() default "";
 
+    /**
+     * Returns the AriaRole value specified in the {@link LocateBy} annotation.
+     * AriaRole is an enumeration that represents the ARIA roles defined in the W3C ARIA specification.
+     * It is used to locate an element based on its role attribute.
+     *
+     * @return The AriaRole value specified in the {@link LocateBy} annotation. If not specified, returns AriaRole.NONE.
+     * @see LocateBy
+     * @see AriaRole
+     */
     AriaRole ariaRole() default AriaRole.NONE;
 }

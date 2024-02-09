@@ -18,13 +18,55 @@ under the License.
  */
 package nl.detestbaas.playwright.annotations;
 
+/**
+ * Enumeration representing different strategies for locating an element.
+ */
 public enum How {
+    /**
+     * Represents an alternate text for an element.
+     */
     ALT_TEXT,
+    /**
+     * Represents a label for an element.
+     */
     LABEL,
+    /**
+     * Represents a placeholder value for an element.
+     * This can be used to indicate that the element should display a temporary or default value until it is replaced with actual content.
+     *
+     * Usage:
+     * PLACEHOLDER placeholder = PLACEHOLDER.PLACEHOLDER;
+     */
     PLACEHOLDER,
+    /**
+     * Represents the role of an element.
+     */
     ROLE,
+    /**
+     * Represents the ID associated with a test.
+     */
     TEST_ID,
+    /**
+     * Represents a text value.
+     *
+     * This variable is used to store a text value that can be associated with different elements or objects in a system.
+     * The text can be used as an alternate text, label, placeholder, role, test ID, title, or for other purposes.
+     *
+     */
     TEXT,
+    /**
+     * Represents the title of an element.
+     */
     TITLE,
+    /**
+     * Represents an unset value for a field.
+     *
+     * <p>This value is used to indicate that a field has not been set or has been intentionally left blank.</p>
+     *
+     * <p>Example usage:</p>
+     * <pre>{@code
+     * How how = How.UNSET;
+     * }</pre>
+     */
     UNSET
 }

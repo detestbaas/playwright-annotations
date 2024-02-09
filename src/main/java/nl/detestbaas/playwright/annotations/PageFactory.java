@@ -35,6 +35,13 @@ import static java.util.Objects.isNull;
  */
 public class PageFactory {
     /**
+     * A factory class for creating locators based on different strategies.
+     */
+    public PageFactory() {
+        // For javadoc purpose
+    }
+
+    /**
      * Map containing locators for different How types.
      * The map is initialized with lambda expressions that invoke static methods from PageFactory class to obtain locators.
      * The keys of the map are of type How enum and the values are BiFunction objects that accept a Page object and a LocateBy object
